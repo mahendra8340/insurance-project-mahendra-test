@@ -20,9 +20,7 @@ public class App {
     	
     	ChromeOptions options = new ChromeOptions();
    	 	options.addArguments("--headless");
-   	 	String tempDir = System.getProperty("java.io.tmpdir") + "/chrome_user_data_" + System.currentTimeMillis();
-		options.addArguments("--user-data-dir=" + tempDir);
-		
+
 		WebDriver driver = new ChromeDriver(options);
     	 
     	
@@ -49,7 +47,8 @@ public class App {
          response.getText();
          
          System.out.println(response.getText());
-         
+    	
+    	 //String response="Message Sent";
          if(response.getText().equalsIgnoreCase("Message Sent")) {
         	 System.out.println("Test Case Passed");
          }

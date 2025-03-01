@@ -24,7 +24,7 @@ public class App {
    	 	WebDriver driver = new ChromeDriver(options);
     	 
     	
-         driver.get("http://3.145.61.169:8081/contact.html");
+         driver.get("http://54.204.71.113:8081/contact.html");
 
          System.out.println(driver.getTitle());
 

@@ -20,8 +20,10 @@ public class App {
     	
     	ChromeOptions options = new ChromeOptions();
    	 	options.addArguments("--headless");
-		options.addArguments("--disable-extensions");
-   	 	WebDriver driver = new ChromeDriver(options);
+   	 	String tempDir = System.getProperty("java.io.tmpdir") + "/chrome_user_data_" + System.currentTimeMillis();
+		options.addArguments("--user-data-dir=" + tempDir);
+		
+		WebDriver driver = new ChromeDriver(options);
     	 
     	
          driver.get("http://54.204.71.113:8081/contact.html");

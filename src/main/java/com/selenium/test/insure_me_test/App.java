@@ -20,8 +20,7 @@ public class App {
     	
     	ChromeOptions options = new ChromeOptions();
    	 	options.addArguments("--headless");
-		String userDataDir = "/path/to/unique/directory" + System.currentTimeMillis(); // Unique directory for each test run
-		options.addArguments("--user-data-dir=" + userDataDir);    	 
+		options.addArguments("--disable-extensions");
    	 	WebDriver driver = new ChromeDriver(options);
     	 
     	

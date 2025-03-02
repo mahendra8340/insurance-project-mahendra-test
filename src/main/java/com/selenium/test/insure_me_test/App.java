@@ -47,7 +47,9 @@ public class App {
          response.getText();
          
          
+    	System.out.println("Insure-me");  	
     	
+
          if(response.getText().equalsIgnoreCase("Message Sent")) {
         	 System.out.println("Test Case Passed");
          }
